@@ -1,0 +1,19 @@
+.card-img{
+    width: 160px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+body{
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.538;
+    color: #333;
+    text-align: left;
+}
+.card-img-action{
+    position: relative;
+}
+a{
+    text-decoration: none;
+}

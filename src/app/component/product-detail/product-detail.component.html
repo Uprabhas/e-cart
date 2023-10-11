@@ -1,0 +1,34 @@
+<!-- <nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color: white;">E-cart</a>
+        <button routerLink="/" class=" btn btn-warning">Back</button>
+    </div>
+</nav> -->
+
+<div class="container">
+    <div class="row product-detail">
+        <div class="col-sm-3">
+            <img src={{productdata?.images[0]}}
+                alt="" class="product-img">
+
+            <div class="">
+                <button class="btn btn-primary ">Buy now</button>&nbsp;
+                <button class="btn btn-success " *ngIf="showadd" (click)="addtocart(productdata)">Add to cart</button>&nbsp;
+                <button class="btn btn-info " *ngIf="showremove" (click)="removeitem(productdata)">remove item</button>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="">
+                <h2>{{productdata?.title}}</h2>
+                <p style="color: aqua;">special offer</p>
+                <h3>price:${{productdata?.price}}</h3>
+                <strong>Category:&nbsp;{{productdata?.category}}</strong><br>
+                <strong>Description:</strong><br>
+                <p>{{productdata?.description}}</p>
+                <p style="color: blueviolet;">Discount:{{productdata.discountPercentage}}%</p><br>
+                <strong>stock:{{productdata?.stock}} Units left</strong><br>
+                <button routerLink="/" class="btn btn-warning" type="button">back</button>
+            </div>
+        </div>
+    </div>
+</div>

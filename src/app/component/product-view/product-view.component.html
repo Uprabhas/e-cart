@@ -1,0 +1,41 @@
+<!-- header -->
+<!-- <div class="container-fluid" style="background-color: black;">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-8 col-lg-5">
+            <div class="hearder">
+                <h2 style="color: white;">E-cart</h2>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- product-view -->
+<div class="container-fluid" style="background-color: black;">
+    <div class="row">
+        <div class="col-md-2 mt-3" *ngFor="let item of data?.products">
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="card-img-action">
+                        <img routerLink="/product-detail/{{item.id}}" src="{{item.thumbnail}}" alt="image"
+                            class="card-img img fluid">
+                    </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                    <div class="">
+                        <h5 class="font-wight-semibold">
+                            <a class="text-default">{{item.title}}</a>
+                        </h5>
+                    </div>
+                    <h3 class="mb-0 font-weight-semibold">${{item.price}}</h3>
+                    <button routerLink="/product-detail/{{item.id}}" class="btn btn-sm btn-dark mt-2"><i
+                            class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;view detail</button>
+                    <button (click)="addtocart(item)" class="btn-sm btn btn-warning mt-2"><i class="fa fa-cart-plus"
+                            aria-hidden="true"></i>&nbsp;add to cart</button>&nbsp;
+                    <button (click)="removeitem(item)" class="btn-sm btn btn-danger mt-2"><i class="fa fa-remove"
+                            aria-hidden="true"></i>&nbsp;remove item</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
